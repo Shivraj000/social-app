@@ -1,0 +1,21 @@
+.Home {
+  position: relative;
+  display: grid;
+  grid-template-columns: 18rem auto 20rem;
+  gap: 1rem;
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .Home {
+    grid-template-columns: 16rem auto;
+  }
+}
+
+/* Small screens / mobiles */
+@media (max-width: 768px) {
+  .Home {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+}

@@ -1,0 +1,19 @@
+.Posts {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .Posts {
+    gap: 0.85rem;
+  }
+}
+
+/* Small screens / mobiles */
+@media (max-width: 768px) {
+  .Posts {
+    gap: 0.75rem;
+  }
+}
