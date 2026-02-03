@@ -1,29 +1,37 @@
-.Auth{
+.Auth {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
     gap: 4rem;
-    position: relative;  
+    position: relative;
+    padding: 1rem; /* small padding for mobile */
+    flex-wrap: wrap; /* allows items to wrap on smaller screens */
 }
 
-.Auth > div{
+.Auth > div {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* stack items vertically on mobile */
+}
+
+.a-left {
+    display: flex;
+    gap: 2rem;
     align-items: center;
     justify-content: center;
 }
 
-.a-left {
-    gap: 2rem;
-}
-
-.a-left > img{
+.a-left > img {
     width: 4rem;
     height: 4rem;
 }
 
 .Webname > h2 {
     color: rgb(43, 43, 163);
+    font-size: 1.5rem;
+    text-align: center;
 }
 
 .infoForm {
@@ -31,38 +39,98 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
+    gap: 1.5rem;
+    width: 100%;
 }
 
-.infoInput{
+.infoInput {
     border: none;
     outline: none;
     background-color: var(--inputColor);
     border-radius: 8px;
-    padding: 17px;
-    flex: 1;
+    padding: 12px 15px;
+    width: 100%;
+    max-width: 300px;
+    box-sizing: border-box;
 }
 
-.infoForm > div{
-    display: flex;  
+.infoForm > div {
+    display: flex;
     gap: 1rem;
-    height: 2rem;
-    width: 90%;
+    width: 100%;
+    flex-wrap: wrap; /* stack inputs on small screens */
+    justify-content: center;
 }
 
-.infoButton{
-    width: 6rem;
-    height: 2rem;
-    align-items: center;
+.infoButton {
+    width: 100%;
+    max-width: 150px;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: rgb(43, 43, 163);
+    color: white;
+    cursor: pointer;
 }
 
-.authForm{
+.authForm {
     background-color: var(--cardColor);
     border-radius: 1rem;
     padding: 1rem;
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
 }
 
-.authForm > div{
+.authForm > div {
     width: 100%;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+}
+
+/* ----------------- Responsive for small screens ----------------- */
+@media screen and (max-width: 768px) {
+    .Auth {
+        flex-direction: column;
+        gap: 2rem;
+        height: auto;
+        padding: 2rem 1rem;
+    }
+
+    .a-left {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .a-left > img {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .Webname > h2 {
+        font-size: 1.3rem;
+    }
+
+    .infoForm > div {
+        flex-direction: column;
+        gap: 0.8rem;
+        width: 100%;
+    }
+
+    .infoInput {
+        padding: 10px;
+        max-width: 100%;
+    }
+
+    .infoButton {
+        max-width: 100%;
+        width: 100%;
+        padding: 12px;
+    }
+
+    .authForm {
+        padding: 1rem;
+        width: 100%;
+    }
 }
